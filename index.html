@@ -151,7 +151,7 @@ async function exportPng(){
    btn.textContent = '正在傳送 LINE…';
    await liff.sendMessages([
      {type:'image', originalContentUrl:urls.originalContentUrl, previewImageUrl:urls.previewImageUrl},
-     {type:'text', text:`EM 吊牌製作需求\n規格：${currentShapeId}（${mmW} × ${mmH} mm）\n請協助確認雷雕製作，謝謝！`}
+     {type:'text', text:`EM 吊牌製作需求\n規格：${currentShapeId}（${mmW} × ${mmH} mm）\n吊牌顏色：${document.querySelector('.swatch.active')?.title || '黑色'}\n請協助確認雷雕製作，謝謝！`}
    ]);
    setStatus('雷雕 PNG 已傳送至目前 LINE 聊天室');
    alert('圖檔已傳送至目前 LINE 聊天室，請確認訊息已出現。謝謝！');
